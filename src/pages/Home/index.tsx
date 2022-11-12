@@ -4,7 +4,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { HandPalm, Play } from "phosphor-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import { CyclesContext } from "@contexts/CyclesContext";
+import { CyclesContext } from "../../contexts/CyclesContext";
 
 import { Countdown } from "../../components/Home/Countdown";
 import { NewCycleForm } from "../../components/Home/NewCycleForm";
