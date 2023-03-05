@@ -46,7 +46,7 @@ export function CyclesContextProvider({
   }
 
   function markCurrentCycleAsFinish() {
-    dispatchCycles(markCurrentCycleAsFinishCycle);
+    dispatchCycles(markCurrentCycleAsFinishCycle());
   }
 
   function createNewCycle(data: CreateCycleData) {
@@ -59,13 +59,13 @@ export function CyclesContextProvider({
       startDate: new Date(),
     };
 
-    dispatchCycles(addNewCycleAction);
+    dispatchCycles(addNewCycleAction(newCycle));
 
     setAmountSecondsPassed(0);
   }
 
   function interruptCycle() {
-    dispatchCycles(interruptCurrentCycleAction);
+    dispatchCycles(interruptCurrentCycleAction());
 
     document.title = "Ignite Timer";
   }
